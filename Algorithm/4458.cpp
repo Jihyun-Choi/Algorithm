@@ -1,12 +1,22 @@
-#include <iostream> 
+#include <iostream>
+#include <string> 
 using namespace std;
 
-int main(void) { 
-	int num, sum=0;
+int main(void) {
+    int num;
+    string str;
 
-	for (int i = 0; i < 5; i++) {
-		cin >> num;
-		sum += num;
-	}
-	cout << sum;
+    cin >> num;
+    cin.ignore();
+
+    while (num--) {
+        getline(cin, str);
+
+        if ((str[0] >= 'a') && (str[0] <= 'z')) {
+            str[0] = toupper(str[0]);
+        }
+
+        cout << str << endl;
+        str = "";
+    }
 }
