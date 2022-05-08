@@ -5,9 +5,5 @@ while True:
     L, P, V = map(int, input().split())
     if L == P == V == 0:
         break
-    elif V%P > L:
-        cnt = L + V // P
-    else:
-        cnt = V % P + V // P
-    print("Case %d: %d" %(i, cnt))
+    print("Case %d: %d" %(i, (V//P)*L + min(V%P, L)))
     i += 1
