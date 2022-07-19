@@ -1,0 +1,6 @@
+Top = int(input())
+Middle = int(input())
+Bottom = int(input())
+Coke = int(input())
+Cider = int(input())
+print(min(Top, Middle, Bottom) + min(Coke, Cider) - 50)
